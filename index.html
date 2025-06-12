@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="image/image1.jpg">
+    <title>Republic Polytechnic is 100 Years Old!</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+            font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            color: #b2f7ef;
+        }
+        .header {
+            text-align: center;
+            padding: 2rem 1rem 1rem 1rem;
+            color: #00ffe7;
+            font-size: 2.8rem;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-shadow: 0 0 6px #00ffe7, 0 0 12px #0ff, 0 0 2px #fff;
+            background: linear-gradient(90deg, #232526 0%, #414345 100%);
+            border-radius: 0 0 32px 32px;
+            box-shadow: 0 4px 32px #00ffe733;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #b2f7ef;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 4px #00ffe7;
+        }
+        .collage {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+        @media (max-width: 900px) {
+            .collage {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 1.2rem;
+                padding: 1rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .collage {
+                grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+                gap: 0.7rem;
+                padding: 0.5rem;
+            }
+            .icon {
+                width: 60px;
+                height: 60px;
+            }
+        }
+        .icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 4px 32px 0 #00ffe755, 0 0 0 2px #00ffe7;
+            background: linear-gradient(135deg, #232526 0%, #414345 100%);
+            transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s, filter 0.3s;
+            filter: brightness(1.1) contrast(1.2) drop-shadow(0 0 8px #00ffe7);
+        }
+        .icon:hover {
+            transform: scale(3);
+            z-index: 10;
+            box-shadow: 0 8px 64px 16px #00ffe7cc, 0 0 0 4px #00ffe7;
+        }
+        .icon:hover img {
+            filter: brightness(1.3) contrast(1.4) drop-shadow(0 0 24px #00ffe7);
+        }
+        /* Fullscreen pop-up overlay */
+        #fullscreen-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(10, 20, 30, 0.95);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        #fullscreen-overlay.active {
+            display: flex;
+        }
+        #fullscreen-overlay img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 24px;
+            box-shadow: 0 8px 64px 16px #00ffe7cc, 0 0 0 4px #00ffe7;
+            background: linear-gradient(135deg, #232526 0%, #414345 100%);
+        }
+        #fullscreen-overlay .close-btn {
+            margin-top: 2rem;
+            color: #00ffe7;
+            background: none;
+            border: 2px solid #00ffe7;
+            border-radius: 8px;
+            padding: 0.5rem 2rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        #fullscreen-overlay .close-btn:hover {
+            background: #00ffe7;
+            color: #232526;
+        }
+    </style>
+</head>
+<body>
+    <div class="header" style="display:flex;align-items:center;justify-content:center;gap:3.5rem;">
+        <img src="image/RP Logo-Vertical-Reversed-Colour.png" alt="RP Shield" style="height:8rem;max-height:8rem;width:auto;aspect-ratio:auto;filter:drop-shadow(0 0 18px #00ffe7);flex-shrink:0;">
+        <span style="display:inline-block;line-height:1.1;">Fast Forward, Republic Polytechnic 100 Years from The Present!</span>
+        <img src="image/RP Logo-Vertical-Reversed-Colour.png" alt="RP Shield" style="height:8rem;max-height:8rem;width:auto;aspect-ratio:auto;filter:drop-shadow(0 0 18px #00ffe7);flex-shrink:0;">
+    </div>
+    <div class="subtitle">Celebrating a century of innovation, learning, and community spirit!</div>
+    <div class="collage">
+        <!-- ICONS: All images in the main directory, renamed as image1, image2, ... -->
+        <div class="icon"><img src="image/image1.jpg" alt="Image 1"></div>
+        <div class="icon"><img src="image/image2.jpg" alt="Image 2"></div>
+        <div class="icon"><img src="image/image3.jpg" alt="Image 3"></div>
+        <div class="icon"><img src="image/image4.jpg" alt="Image 4"></div>
+        <div class="icon"><img src="image/image5.jpg" alt="Image 5"></div>
+        <div class="icon"><img src="image/image6.jpg" alt="Image 6"></div>
+        <div class="icon"><img src="image/image7.jpg" alt="Image 7"></div>
+        <div class="icon"><img src="image/image8.jpg" alt="Image 8"></div>
+        <div class="icon"><img src="image/image9.jpg" alt="Image 9"></div>
+        <div class="icon"><img src="image/image10.jpg" alt="Image 10"></div>
+        <div class="icon"><img src="image/image11.jpg" alt="Image 11"></div>
+        <div class="icon"><img src="image/image12.jpg" alt="Image 12"></div>
+        <div class="icon"><img src="image/image13.jpg" alt="Image 13"></div>
+        <div class="icon"><img src="image/image14.jpg" alt="Image 14"></div>
+        <div class="icon"><img src="image/image15.jpg" alt="Image 15"></div>
+        <div class="icon"><img src="image/image16.jpg" alt="Image 16"></div>
+        <div class="icon"><img src="image/image17.jpg" alt="Image 17"></div>
+        <div class="icon"><img src="image/image18.jpg" alt="Image 18"></div>
+        <div class="icon"><img src="image/image19.jpg" alt="Image 19"></div>
+        <div class="icon"><img src="image/image20.jpg" alt="Image 20"></div>
+        <div class="icon"><img src="image/image21.jpg" alt="Image 21"></div>
+        <div class="icon"><img src="image/image22.jpg" alt="Image 22"></div>
+        <div class="icon"><img src="image/image23.jpg" alt="Image 23"></div>
+        <div class="icon"><img src="image/image24.jpg" alt="Image 24"></div>
+        <div class="icon"><img src="image/image25.jpg" alt="Image 25"></div>
+        <div class="icon"><img src="image/image26.jpg" alt="Image 26"></div>
+        <div class="icon"><img src="image/image27.jpg" alt="Image 27"></div>
+        <div class="icon"><img src="image/image28.jpg" alt="Image 28"></div>
+        <div class="icon"><img src="image/image29.jpg" alt="Image 29"></div>
+        <div class="icon"><img src="image/image30.jpg" alt="Image 30"></div>
+        <div class="icon"><img src="image/image31.jpg" alt="Image 31"></div>
+        <div class="icon"><img src="image/image32.jpg" alt="Image 32"></div>
+        <div class="icon"><img src="image/image33.jpg" alt="Image 33"></div>
+        <div class="icon"><img src="image/image34.jpg" alt="Image 34"></div>
+        <div class="icon"><img src="image/image35.jpg" alt="Image 35"></div>
+    </div>
+    <div id="fullscreen-overlay" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(10,30,40,0.97);backdrop-filter:blur(2px);align-items:center;justify-content:center;">
+        <span id="close-overlay" style="position:absolute;top:32px;right:48px;font-size:3rem;color:#00ffe7;cursor:pointer;z-index:10001;text-shadow:0 0 16px #00ffe7,0 0 32px #0ff;">&times;</span>
+        <img id="fullscreen-img" src="" alt="Full Image" style="max-width:90vw;max-height:80vh;border-radius:32px;box-shadow:0 0 64px #00ffe7,0 0 0 8px #00ffe7;">
+    </div>
+    <script>
+// Hover pop-up at 3x size
+const icons = document.querySelectorAll('.icon');
+icons.forEach(icon => {
+    icon.addEventListener('mouseenter', function() {
+        icon.classList.add('pop-center');
+    });
+    icon.addEventListener('mouseleave', function() {
+        icon.classList.remove('pop-center');
+    });
+    // Click to fullscreen overlay
+    icon.addEventListener('click', function(e) {
+        const img = icon.querySelector('img');
+        const overlay = document.getElementById('fullscreen-overlay');
+        const overlayImg = document.getElementById('fullscreen-img');
+        overlayImg.src = img.src;
+        overlay.style.display = 'flex';
+        setTimeout(()=>{overlayImg.focus && overlayImg.focus();}, 100);
+        e.stopPropagation();
+    });
+});
+// Close overlay logic
+const overlay = document.getElementById('fullscreen-overlay');
+document.getElementById('close-overlay').onclick = function(e) {
+    overlay.style.display = 'none';
+    document.getElementById('fullscreen-img').src = '';
+    e.stopPropagation();
+};
+overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) {
+        overlay.style.display = 'none';
+        document.getElementById('fullscreen-img').src = '';
+    }
+});
+// Keyboard ESC to close overlay
+window.addEventListener('keydown', function(e) {
+    if (overlay.style.display === 'flex' && (e.key === 'Escape' || e.key === 'Esc')) {
+        overlay.style.display = 'none';
+        document.getElementById('fullscreen-img').src = '';
+    }
+});
+    </script>
+</body>
+</html>
